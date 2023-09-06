@@ -1,10 +1,14 @@
 import React from "react";
+import Login from "./Login";
 import Welcome from "./Welcome";
 
 
 function App(){
   return(
-    <Welcome/>
+    <div>
+      <Welcome/>
+    <Login/>
+    </div>
   )
 }
 

@@ -24,3 +24,24 @@ body {
   border-radius: 2px solid;
   
   }
+
+  .loginForm{
+    text-align: center;
+    margin: 0 26% 0 30% ;
+    padding:0 5% 0 2%;
+  }
+
+  .login, .signUp{
+    padding: 20px 100px 20px 100px;
+    margin-bottom: 10px;
+    /* border-collapse: 5%; */
+    font-size:15px
+  }
+
+  .loginButton{
+    padding: 20px 150px 20px 160px;
+    margin-bottom: 10px;
+    border-collapse: 5%;
+    font-size:20px;
+    margin-top: 2%;
+  }

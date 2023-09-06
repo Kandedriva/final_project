@@ -3,6 +3,7 @@ import Login from "./Login";
 import Welcome from "./Welcome";
 import CreateJob from "./CreateJob";
 import CreateAccount from "./CreateAccount";
+import JobApplication from "./JobApplication";
 
 
 function App(){
@@ -12,6 +13,7 @@ function App(){
     <Login/>
     <CreateJob/>
     <CreateAccount/>
+    <JobApplication/>
     </div>
   )
 }

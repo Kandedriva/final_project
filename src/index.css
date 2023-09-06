@@ -5,6 +5,10 @@ body {
 
 }
 
+label{
+  margin: 20px;
+}
+
 /* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -59,7 +63,7 @@ body {
      
     }
     .createJobInput{
-      padding: 40px 200px 40px 200px;
+      padding: 10px 200px 10px 200px ;
     margin-bottom: 10px;
     font-size:25px
  
@@ -96,7 +100,24 @@ body {
     }
 
     .signUp{
-      padding: 30px 280px 30px 280px;
+      /* position: relative; */
+      padding: 20px 200px 20px 300px;
       margin-bottom: 10px;
       /* border-collapse: 5%; */
-      font-size:15px}
+      font-size:15px
+    }
+
+    .jobApplication{
+      text-align: center;
+      margin: 0 200px 0 200px;
+      padding:0 10% 0 10%;
+      font-size: 20px;
+      /* width: 900px;
+      height: 9000px; */
+    }
+
+    .fullName{
+      padding:20px 200px 20px 300px;
+      margin: 10px;
+      font-size: 20px;
+    }

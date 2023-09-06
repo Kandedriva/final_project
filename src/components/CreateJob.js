@@ -51,7 +51,7 @@ function CreateJob() {
 
          <div className="description">
           {/* <label htmlFor="description">Job description:</label> */}
-          <textarea name="description" rows="15" cols="100"></textarea>
+          <textarea name="description" rows="15" cols="80"></textarea>
         </div>
   
         <button className="signUpButton" type="button" name="button">

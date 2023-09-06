@@ -1,6 +1,7 @@
 import React from "react";
 import Login from "./Login";
 import Welcome from "./Welcome";
+import CreateJob from "./CreateJob";
 
 
 function App(){
@@ -8,6 +9,7 @@ function App(){
     <div>
       <Welcome/>
     <Login/>
+    <CreateJob/>
     </div>
   )
 }

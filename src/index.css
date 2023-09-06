@@ -19,9 +19,10 @@ body {
   
 }
 .sign{
+  border-radius: 20px;
   margin: 10px 2px 10px 2px;
   padding: 10px 50px 10px 50px;
-  border-radius: 2px solid;
+  /* border-radius: 2px solid; */
   
   }
 
@@ -39,9 +40,41 @@ body {
   }
 
   .loginButton{
+    border-radius: 20px;
     padding: 20px 150px 20px 160px;
     margin-bottom: 10px;
     border-collapse: 5%;
     font-size:20px;
     margin-top: 2%;
   }
+
+  .createJob{
+    text-align: center;
+    font-size: 20px;
+    margin: 25px;
+ /* width: 100%;
+ height: 100%; */
+    
+    
+     
+    }
+    .createJobInput{
+      padding: 40px 200px 40px 200px;
+    margin-bottom: 10px;
+    font-size:25px
+ 
+    }
+
+    .signUpButton{
+      border-radius: 20px;
+      padding: 20px 150px 20px 150px;
+      margin-bottom: 10px;
+      border-collapse: 5%;
+      font-size:20px;
+      margin-top: 2%;
+    }
+    .jobCreation{
+      text-align: center;
+      padding:0 300px 0 300px;
+      margin:0 50px 0 50px;
+    }

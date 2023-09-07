@@ -1,23 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 
+
+
 function NavBar(){
+
     return (
-    <div>
+   
+        
+    <div className="navbar">
             <NavLink to="/" exact>
-                Available 
+                Job List 
             </NavLink>
-            <NavLink to ="/list" exat>
-                waiting list
+            <NavLink to ="/list" exact>
+                <span>Your Applications</span>
             </NavLink>
-            <NavLink to="/Create Job">
+            <NavLink to="/create-Job" exact>
                 Open a position
             </NavLink>
-            <NavLink to="/Logout">
+            <NavLink to="/logout" exact>
                 Logout
             </NavLink>
     </div>
+   
     )
 }
 

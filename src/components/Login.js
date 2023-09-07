@@ -26,7 +26,7 @@ let value = event.target.value;
 
 function handleSubmit(event){
 event.preventDefault();
-console.log("Submited")
+console.log("Submitted")
 // const checkUser = usersArray.find((person)=>(person.fName===fName && person.lName===lName && person.password===password));
 
 // if(checkUser){

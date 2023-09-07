@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import AvailableJobFormat from "./AvailableJobFormat";
 
 function CreateJob() {
   const [newJob, setnewJob] = useState({
@@ -23,6 +23,8 @@ function CreateJob() {
     event.preventDefault();
 
   }
+
+ 
     return (
       <form className="createJob" action="index.html" method="post">
         <h3>Open a position and receive the candidats you need</h3>
@@ -74,7 +76,13 @@ function CreateJob() {
           <textarea name="description" rows="15" cols="80" onChange={handleChange} value={newJob.description}></textarea>
         </div>
   
-        <button className="signUpButton" type="submit" name="button" onSubmit={submitJob}>
+        <button 
+        className="signUpButton" 
+        type="submit" 
+        name="button" 
+        onSubmit={submitJob}
+        
+        >
           Post the Job
         </button>
       </form>

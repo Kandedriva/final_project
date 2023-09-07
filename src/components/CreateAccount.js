@@ -5,12 +5,22 @@ import React, { useState } from "react";
 
 
         function CreateAccount() {
+            const [mouseOver, setmouseOver] = useState(false);
             const [registration, setRegistration] = useState({
                 firstName: "",
                 lastName: "",
                 email: "",
                 password: ""
             })
+            function handleMouseOver(){
+                setmouseOver(true);
+                
+            }
+            
+            function handleMouseOut(){
+                setmouseOver(false);
+            }
+            
 
             function handleClick(event){
                 const name = event.target.name;
@@ -38,7 +48,15 @@ import React, { useState } from "react";
                   <input className="signUp" type="text" name="email" value={registration.email} placeholder="password..."  onChange={handleClick}/>
                   <label htmlFor="password">Create password </label><br />
                   <input className="signUp" type="password" name="password" value={registration.password} placeholder="Confirm password..." onChange={handleClick} />
-                  <button type="submit" name="button" className="signUpButton" onSubmit={handleUser}>Create</button>
+                  <button 
+                  type="submit" 
+                  name="button" 
+                  className="signUpButton" 
+                  onSubmit={handleUser}
+                  onMouseOut={handleMouseOut}
+                  style={mouseOver? {backgroundColor: "#00FFFF"}: { backgroundColor: "white"}}
+                  onMouseOver={handleMouseOver}
+                  >Create</button>
                 </form>
             
             );

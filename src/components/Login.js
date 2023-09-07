@@ -1,15 +1,29 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import Button from "./Button";
 
 
 
 function Login() {
     const [isLogIn, setisLogIn] = useState(false);
+    const [mouseOver, setmouseOver] = useState(false);
+
 const [user, setUser] = useState({
     fName: "",
     lName: "",
     password: ""
 });
+        
+
+function handleMouseOver(){
+    setmouseOver(true);
+    
+}
+
+function handleMouseOut(){
+    setmouseOver(false);
+}
+
 const history = useHistory();
 
 function handleChange(event){
@@ -22,6 +36,10 @@ let value = event.target.value;
         ...user,
         [name]: value,
     });
+}
+
+function goBack(){
+  history.push("/create-Job")
 }
 
 function handleSubmit(event){
@@ -40,6 +58,7 @@ console.log("Submitted")
 
     return (
       <div className="divi">
+      <nav><button className="goback" onClick={goBack}> Go back</button></nav>
         <form className="loginForm" action="index.html" method="post" onSubmit={handleSubmit}>
         <h1>Login</h1>
 
@@ -51,8 +70,16 @@ console.log("Submitted")
           <input className="login" type="password" name="password" id="password" placeholder="password" onChange={handleChange} value={user.password}/><br />
           <input className="check" type="checkbox" name="rememberMe" id="rememberMe" />
           <label htmlFor="rememberMe">Remember me</label><br />
-          <button type="submit" name="button" className="loginButton"  >Login</button>
+          <button 
+          type="submit" 
+          name="button" 
+          className="loginButton"  
+          onMouseOut={handleMouseOut}
+        style={mouseOver? {backgroundColor: "#00FFFF"}: { backgroundColor: "white"}}
+        onMouseOver={handleMouseOver}
+          >Login</button>
         </form>
+        
       </div>
     );
   }

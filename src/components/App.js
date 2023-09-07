@@ -8,6 +8,9 @@ import JobApplication from "./JobApplication";
 import NavBar from "./NavBar";
 import ApplicationList from "./ApplicationList";
 import AvailableJobList from "./AvailableJobList";
+
+
+
 function App(){
 const [displayWelcome, setdisplayWelcome] = useState(true);
   const [signUp, setSignUp] = useState(false)
@@ -29,7 +32,6 @@ const [displayWelcome, setdisplayWelcome] = useState(true);
 
   return(
     <div>
-    <JobApplication/>
     <NavBar/>
     <Switch>
     <Route exact path="/list">
@@ -44,6 +46,7 @@ const [displayWelcome, setdisplayWelcome] = useState(true);
     {displayWelcome && (<Welcome logInClick={handleSignUp} createClick={handleCreate}/>)}
 {signUp && <Login/>}
 {ceateAccount && <CreateAccount/>}
+{/* <JobApplication/> */}
 
     
     </Switch>

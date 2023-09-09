@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import JobApplicationFormat from "./JobApplicationFormat";
 import JobApplication from "./JobApplication";
+import { Route } from "react-router-dom";
 
 function ApplicationList(){
     const [applications, setApplications] = useState([]);
@@ -29,7 +30,8 @@ return(
             availability={application.availability}
 
             />)}
-            <JobApplication position={position}/>
+            <Route exact path="/apply" component={<JobApplication position={position}/>} />
+            
 
     </div>
 )

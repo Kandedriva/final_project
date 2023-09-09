@@ -4,13 +4,19 @@ import { useHistory } from "react-router-dom";
 
 
  
-function Welcome({logInClick, createClick}) {
+function Welcome() {
   const history = useHistory();
 
   // function backToLogIn(){
   //   history.goBack();
   // }
 
+function logInClick(){
+  history.push("/login");
+}
+function createClick(){
+  history.push("/register")
+}
 
     return (
       <div className="homePage">

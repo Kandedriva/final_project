@@ -1,7 +1,13 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 
 function AvailableJobFormat({title, Company, experiences, average, location, description, website}){
+const history = useHistory()
+    function handleClick(){
+        history.push("/apply")
+
+    }
     return (
         <div>
             <h3>The job's Title:  { title}</h3>
@@ -11,7 +17,7 @@ function AvailableJobFormat({title, Company, experiences, average, location, des
             <p>Average salary: {average} </p>
             <p>Location: {location} </p>
             <p>Job details: {description} </p>
-            <button>Apply</button>
+            <button onClick={handleClick}>Apply</button>
 
 
         </div>

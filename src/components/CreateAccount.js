@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 
 
@@ -12,6 +13,9 @@ import React, { useState } from "react";
                 email: "",
                 password: ""
             })
+            const history = useHistory()
+
+
             function handleMouseOver(){
                 setmouseOver(true);
                 
@@ -56,6 +60,7 @@ import React, { useState } from "react";
                         password: ""})
                     console.log(users)
                 })
+                history.push("/login")
 
 
 

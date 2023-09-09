@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import AvailableJobFormat from "./AvailableJobFormat";
+import { NavLink } from "react-router-dom";
 
 function AvailableJobList(){
 const [jobs, setJobs] = useState([]);
@@ -14,7 +15,18 @@ useEffect(() => {
 
     return(
         <div>
-            {jobs.map((displayjob)=><AvailableJobFormat key={displayjob.id} title={displayjob.jobTitle} Company={displayjob.company} experiences={displayjob.experience} average={displayjob.salary} location={displayjob.location} description={displayjob.description} website={displayjob.website}/>)}
+        
+       
+                    
+            {jobs.map((displayjob)=><AvailableJobFormat
+             key={displayjob.id} 
+             title={displayjob.jobTitle} 
+             Company={displayjob.company} 
+             experiences={displayjob.experience} 
+             average={displayjob.salary} 
+             location={displayjob.location} 
+             description={displayjob.description} 
+             website={displayjob.website}/>)}
         </div>
     )
 }

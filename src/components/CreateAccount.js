@@ -33,6 +33,32 @@ import React, { useState } from "react";
 
             function handleUser(event){
                 event.preventDefault();
+                const newUser = {
+                    firstName: registration.firstName,
+                    lastName: registration.lastName,
+                    email: registration.email,
+                    password: registration.password
+                }
+
+                fetch("https://phase-2-banckend.onrender.com/users",{
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json"
+                    },
+                    body: JSON.stringify(newUser),
+                })
+                .then(response=>response.json())
+                .then(users=>{
+                    setRegistration({
+                        firstName: "",
+                        lastName: "",
+                        email: "",
+                        password: ""})
+                    console.log(users)
+                })
+
+
+
                 console.log("Submitted")
 
             }

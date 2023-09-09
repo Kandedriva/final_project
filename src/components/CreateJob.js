@@ -21,12 +21,44 @@ function CreateJob() {
   }
   function submitJob(event){
     event.preventDefault();
+    const newjobForma = {
+      company: newJob.company, 
+      title: newJob.title, 
+      link: newJob.link, 
+      experience: newJob.experience, 
+      salary: newJob.salary, 
+      location: newJob.location,
+       description: newJob.description
+      }
+    console.log("Submitted")
+    fetch("https://phase-2-banckend.onrender.com/availableJobs",{
+      method: "POST",
+      headers:{"content-type": "application/json"
+
+      },
+      body: JSON.stringify(newjobForma),
+  })
+  .then(response=>response.json())
+  .then(jobs=>{
+   
+   setnewJob(jobs)
+  })
+
+  setnewJob({
+    company: "",
+    title: "",
+    link: "",
+    experience: "",
+    salary: "",
+    location: "",
+    description: ""
+  })
 
   }
 
  
     return (
-      <form className="createJob" action="index.html" method="post">
+      <form className="createJob" action="index.html" method="post" onSubmit={submitJob}>
         <h3>Open a position and receive the candidats you need</h3>
 
                 <label htmlFor="company">Company's name:</label>
@@ -80,7 +112,7 @@ function CreateJob() {
         className="signUpButton" 
         type="submit" 
         name="button" 
-        onSubmit={submitJob}
+        
         
         >
           Post the Job

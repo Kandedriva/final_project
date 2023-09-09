@@ -39,7 +39,7 @@ let value = event.target.value;
 }
 
 function goBack(){
-  history.push("/create-Job")
+  history.push("/logout")
 }
 
 function handleSubmit(event){

@@ -1,15 +1,15 @@
 import React from "react";
 
-function JobApplicationFormat(){
+function JobApplicationFormat({fName, email, history, education, availability,lName}){
     return (
         <div>
-        <h2>{"First and Last name"}</h2>
-        <h3>{"Email"}</h3>
-        <span>{"Employment History"} </span>
-        <p>{"Education"} </p>
-        <p>{"Availability"} </p>
-        <p>{"Job description"} </p>
-
+         <h2>fullName: {fName} {lName}</h2>
+        <h3>Email: {email}</h3>
+        <span>Work History: {history} </span>
+        <p>Education background: {education} </p>
+        <p>Availability: {availability} </p>
+        
+  
 
     </div>
     )

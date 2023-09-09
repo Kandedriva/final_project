@@ -137,10 +137,10 @@ label{
     .navbar{
       display: flex;
   justify-content: space-between;
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
-  padding: 10px 0;
-  font-size: 15px;
+  padding: 20px 0;
+  font-size: 18px;
       
     }
     .goback{

@@ -33,6 +33,8 @@ const [displayWelcome, setdisplayWelcome] = useState(true);
   return(
     <div>
     <NavBar/>
+    {/* <JobApplication/> */}
+
     <Switch>
     <Route exact path="/list">
     <ApplicationList/>
@@ -43,10 +45,13 @@ const [displayWelcome, setdisplayWelcome] = useState(true);
 <Route exact path = "/">
   <AvailableJobList/>
 </Route>
-    {displayWelcome && (<Welcome logInClick={handleSignUp} createClick={handleCreate}/>)}
+
+  {/* <Welcome/> */}
+
+    {displayWelcome && (<Route exact path="/logout"> <Welcome logInClick={handleSignUp} createClick={handleCreate}/></Route>)}
 {signUp && <Login/>}
 {ceateAccount && <CreateAccount/>}
-{/* <JobApplication/> */}
+
 
     
     </Switch>

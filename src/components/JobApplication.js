@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
-function JobApplication() {
+function JobApplication({position}) {
+
+  const [newApplication, setNewApplication] = useState([]);
 
   const [application, setApplication] = useState({
     applyName: "",
@@ -24,11 +26,35 @@ function JobApplication() {
 
   function handleApplication(event){
     event.preventDefault();
+    const newApplication ={
+      applyName: application.applyName,
+      restOfName: application.restOfName,
+      email: application.email,
+      history: application.history,
+      education: application.education,
+      availability: application.availability
+
+    }
+
+
+    fetch("https://phase-2-banckend.onrender.com/waitingList",{
+      method: "POST",
+      headers:{
+        "content-type": "application/json"
+      },
+      body: JSON.stringify(newApplication)
+    })
+    .then(response=>response.json())
+    .then(newpost=>position(newpost)
+  )
+
+
+
     console.log("Your applied successfully to this position.")
 
   }
     return (
-      <form className="jobApplication" action="index.html" method="post">
+      <form className="jobApplication" action="index.html" method="post" onSubmit={handleApplication}>
         <h2>Apply for this position</h2>
         <div className="firstName">
           <label htmlFor="applyName">First name</label><br />
@@ -66,7 +92,7 @@ function JobApplication() {
           This process can take a long time depending on HR. Good Luck.
         </p>
   
-        <button className="loginButton" type="submit" name="button" onSubmit={handleApplication}>Submit</button>
+        <button className="loginButton" type="submit" name="button" >Submit</button>
       </form>
     );
   }

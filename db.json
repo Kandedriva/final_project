@@ -1,0 +1,69 @@
+{ "availableJobs" : [
+    {
+      "id": 0,
+      "company": "Amazon",
+      "jobTitle": "Amazon Shopper",
+      "salary": "$19/hour",
+      "website" : "www.amazon.force.com",
+      "experience": "No experience Require",
+      "location": "Brooklyn New York",
+      "description": "work in the warehouse: Work hard, have fun, make history."
+  
+    },
+    {
+      "id": 1,
+      "company": "Google",
+      "jobTitle": "React developer",
+      "salary": "$50/hour",
+      "website": "www.google.com",
+      "experience": "No experience Require",
+      "location": "Online",
+      "description": "Apply what you learn at Flathiron School"
+    },
+    {
+      "id": 2,
+      "company": "Microsoft",
+      "jobTitle": "FrontEnd web developer",
+      "salary": "$55/hour",
+      "website": "www.microsoft.com",
+      "experience": "No experience Require",
+      "location": "Online and personal",
+      "description": "Apply what you learn at Flathiron School"
+    }
+  ],
+  "users":[
+    {
+        "id": 0,
+        "fName": "Drissa",
+        "lName": "Kande",
+        "email": "123web@gmail.com",
+        "passwor": "Goodluck"
+    },
+    {
+        "id": 1,
+        "fName": "Issa",
+        "lName": "Nacanabo",
+        "email": "nacson@gmail.com",
+        "passwor": "Youtube"
+    },
+    {
+        "id":2,
+        "fName": "Oumar",
+        "lName": "Soumahoro",
+        "email": "OleO@gmail.com",
+        "passwor": "Filsd'Imam"
+    }
+  ],
+  "waitingList":[
+    {
+        "id":0,
+        "applicationName": "Drissa",
+        "lastName": "Kande",
+        "email": "123web@gmail.com",
+        "history": "I use to work in a Restaurant, I at Whole Food Market and I'm currently working at Amazon",
+        "education": "Student at Flathiron School",
+        "availability": "Every Day, any time"
+    }
+  ]
+  }
+  

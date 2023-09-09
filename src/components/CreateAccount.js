@@ -38,7 +38,7 @@ import React, { useState } from "react";
             }
 
             return (             
-                <form className="accountForm" action="index.html" method="post" >
+                <form className="accountForm" action="index.html" method="post" onSubmit={handleUser}>
                 <h1>Create an account</h1>
                   <label htmlFor="fname">First Name</label>
                   <input className="signUp" type="text" name="firstName" value={registration.firstName} placeholder="enter first name"  onChange={handleClick}/>
@@ -52,7 +52,7 @@ import React, { useState } from "react";
                   type="submit" 
                   name="button" 
                   className="signUpButton" 
-                  onSubmit={handleUser}
+                  
                   onMouseOut={handleMouseOut}
                   style={mouseOver? {backgroundColor: "#00FFFF"}: { backgroundColor: "white"}}
                   onMouseOver={handleMouseOver}

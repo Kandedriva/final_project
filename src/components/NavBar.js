@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import { NavLink, useHistory } from "react-router-dom";
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+
 
 
 
@@ -16,8 +20,24 @@ function NavBar(){
     }
     return (
         
-    <div className="navbar">
-    <button onClick={handleLogOut}>Logout</button>
+    <div className="">
+
+<Navbar bg="primary" data-bs-theme="dark" className="navbar">
+        <Container>
+          <Navbar.Brand href="/">Job List </Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="/list">Your Applications</Nav.Link>
+            <Nav.Link href="/create-Job">Open a position</Nav.Link>
+            <Nav.Link href="/logout">Logout</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+
+
+
+
+
+    {/* <button onClick={handleLogOut}>Logout</button>
             <NavLink to="/" exact>
                 Job List 
             </NavLink>
@@ -29,7 +49,7 @@ function NavBar(){
             </NavLink>
             <NavLink to="/logout" exact>
                 Logout
-            </NavLink>
+            </NavLink> */}
     </div>
    
     )

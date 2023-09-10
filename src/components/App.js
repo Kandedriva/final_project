@@ -8,7 +8,7 @@ import JobApplication from "./JobApplication";
 import NavBar from "./NavBar";
 import ApplicationList from "./ApplicationList";
 import AvailableJobList from "./AvailableJobList";
-import BasicExample from "./Try";
+import Try from "./Try";
 
 
 
@@ -20,7 +20,6 @@ function App(){
 
   return(
     <div>
-    {/* <BasicExample/> */}
     
  {/* <Try/> */}
     <NavBar/>

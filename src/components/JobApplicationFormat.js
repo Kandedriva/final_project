@@ -2,7 +2,7 @@ import React from "react";
 
 function JobApplicationFormat({fName, email, history, education, availability,lName}){
     return (
-        <div>
+        <div className="display-job">
          <h2>fullName: {fName} {lName}</h2>
         <h3>Email: {email}</h3>
         <span>Work History: {history} </span>

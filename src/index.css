@@ -140,9 +140,10 @@ label{
     }
 
     .navbar{
+      background-color: aquamarine;
       display: flex;
   justify-content: space-between;
-  max-width: 500px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 20px 0;
   font-size: 18px;
@@ -241,5 +242,11 @@ label{
       font-weight: bold;
       font-size: 35px;
 margin: 0px 0 5% 0;  
+  }
+
+  .warning{
+    text-align: center;
+    /* font-weight: bold; */
+    font-size: 20px;
   }
     

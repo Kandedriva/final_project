@@ -27,9 +27,9 @@ label{
     monospace;
 } */ 
 .homePage{
-  /* background-color: powderblue; */
+  background-color: powderblue;
   text-align: center;
-  padding: 200px;
+  padding: 90px;
   margin: 0;
   font-size: 25px;
   border: 0ch;
@@ -37,7 +37,7 @@ label{
 }
 .sign{
   border-radius: 20px;
-  margin: 10px 2px 10px 2px;
+  margin: 40px 2px 40px 2px;
   padding: 10px 50px 10px 50px;
   /* border-radius: 2px solid; */
   
@@ -197,18 +197,18 @@ label{
       box-sizing: border-box;
       padding: 0 15px 10px 15px;
       max-width: 60%;
-      margin: 20% auto;
+      margin: 5% auto;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
     }
     .SignIn{
-  margin: 10px 100px 10px 100px;
+  margin: 10px 35% 10px 35%;
   padding: 10px 25px 10px 25px;
 
     }
     .logH2{
-      margin: 30px 50% 2% 0;
+      margin: 10px 10px 5px 10px;
       max-width: 200px;
       text-align: center;
 

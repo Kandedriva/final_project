@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import AvailableJobFormat from "./AvailableJobFormat";
 import { NavLink } from "react-router-dom";
+import NavBar from "./NavBar";
 
 function AvailableJobList(){
 const [jobs, setJobs] = useState([]);
@@ -15,8 +16,22 @@ useEffect(() => {
 
     return(
         <div>
-        
-       
+   
+        {/* <div className="navbar">
+        <NavLink to="/" exact>
+                Job List 
+            </NavLink>
+            <NavLink to ="/list" exact>
+                <span>Your Applications</span>
+            </NavLink>
+            <NavLink to="/create-Job" exact>
+                Open a position
+            </NavLink>
+            <NavLink to="/logout" exact>
+                Logout
+            </NavLink>
+
+        </div> */}
                     
             {jobs.map((displayjob)=><AvailableJobFormat
              key={displayjob.id} 

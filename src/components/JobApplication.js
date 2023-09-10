@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function JobApplication({position}) {
+function JobApplication() {
 
   const [newApplication, setNewApplication] = useState([]);
 
@@ -24,6 +24,10 @@ function JobApplication({position}) {
 
   }
 
+function newapplication(newpost){
+  setNewApplication([...newApplication, newpost])
+}
+
   function handleApplication(event){
     event.preventDefault();
     const newApplication ={
@@ -35,8 +39,6 @@ function JobApplication({position}) {
       availability: application.availability
 
     }
-
-
     fetch("https://phase-2-banckend.onrender.com/waitingList",{
       method: "POST",
       headers:{
@@ -45,7 +47,7 @@ function JobApplication({position}) {
       body: JSON.stringify(newApplication)
     })
     .then(response=>response.json())
-    .then(newpost=>position(newpost)
+    .then(newpost=>newapplication(newpost)
   )
 
 

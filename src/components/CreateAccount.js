@@ -58,7 +58,6 @@ import { useHistory } from "react-router-dom";
                         lastName: "",
                         email: "",
                         password: ""})
-                    console.log(users)
                 })
                 history.push("/login")
 

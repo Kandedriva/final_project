@@ -1,127 +1,123 @@
-import React, { useState } from "react";
-import AvailableJobFormat from "./AvailableJobFormat";
+
+import React, { useState } from 'react';
+import { Form, Button } from 'react-bootstrap';
+import FloatingLabel from 'react-bootstrap/FloatingLabel';
+
+/* Import Bootstrap CSS at the top */
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 function CreateJob() {
-  const [newJob, setnewJob] = useState({
-    company: "",
-    title: "",
-    link: "",
-    experience: "",
-    salary: "",
-    location: "",
-    description: ""
-  });
-  function handleChange(event){
-    const name = event.target.name;
-    let value = event.target.value;
-    setnewJob({
-      ...newJob,
-      [name]: value,
-    })
-  }
-  function submitJob(event){
-    event.preventDefault();
-    const newjobForma = {
-      company: newJob.company, 
-      title: newJob.title, 
-      link: newJob.link, 
-      experience: newJob.experience, 
-      salary: newJob.salary, 
-      location: newJob.location,
-       description: newJob.description
+  const [openPosition, setOpenPosition] = useState([]);
+    const [newJob, setnewJob] = useState({
+        company: "",
+        title: "",
+        link: "",
+        experience: "",
+        salary: "",
+        location: "",
+        description: ""
+      });
+      function handleChange(event){
+        const name = event.target.name;
+        let value = event.target.value;
+        setnewJob({
+          ...newJob,
+          [name]: value,
+        })
       }
-    console.log("Submitted")
-    fetch("https://phase-2-banckend.onrender.com/availableJobs",{
-      method: "POST",
-      headers:{"content-type": "application/json"
 
-      },
-      body: JSON.stringify(newjobForma),
-  })
-  .then(response=>response.json())
-  .then(jobs=>{
-   
-   setnewJob(jobs)
-  })
+      function addNewPostion(jobs){
+        setOpenPosition([...openPosition, jobs])
 
-  setnewJob({
-    company: "",
-    title: "",
-    link: "",
-    experience: "",
-    salary: "",
-    location: "",
-    description: ""
-  })
+      }
 
-  }
+      function submitJob(event){
+        event.preventDefault();
+        const newjobForma = {
+          company: newJob.company, 
+          title: newJob.title, 
+          link: newJob.link, 
+          experience: newJob.experience, 
+          salary: newJob.salary, 
+          location: newJob.location,
+           description: newJob.description
+          }
+        console.log("Submitted")
+        fetch("https://phase-2-banckend.onrender.com/availableJobs",{
+          method: "POST",
+          headers:{"content-type": "application/json"
+    
+          },
+          body: JSON.stringify(newjobForma),
+      })
+      .then(response=>response.json())
+      .then(jobs=>{
+       
+        addNewPostion(jobs)
+      })
+    
+      setnewJob({
+        company: "",
+        title: "",
+        link: "",
+        experience: "",
+        salary: "",
+        location: "",
+        description: ""
+      })
+    
+      }
+  return (
+    <div className="form-container info">
+            <h3>Open a position and receive the candidats you need</h3>
 
- 
-    return (
-      <form className="createJob" action="index.html" method="post" onSubmit={submitJob}>
-        <h3>Open a position and receive the candidats you need</h3>
+      <Form className="" onSubmit={submitJob}>
+        <Form.Group controlId="formCompanyName" >
+          <Form.Label>Company's name:</Form.Label>
+          <Form.Control type="text" placeholder="Enter first name" name="company" value={newJob.company}  onChange={handleChange}/>
+        </Form.Group>
 
-                <label htmlFor="company">Company's name:</label>
+        <Form.Group controlId="formJobTitle">
+          <Form.Label>Job Title:</Form.Label>
+          <Form.Control type="text" placeholder="Enter job title" name="title" value={newJob.title}  onChange={handleChange}/>
+        </Form.Group>
 
-        <div className="jobCreation">
-          {/* <label htmlFor="company">Company's name:</label> */}
-          
-          <input className="createJobInput" type="text" name="company" value={newJob.company}  onChange={handleChange}/>
-        </div>
-        <label htmlFor="title">Job Title:</label>
+        <Form.Group controlId="formWebsite">
+          <Form.Label>Company's website:</Form.Label>
+          <Form.Control type="link" placeholder="Enter website" name="link" value={newJob.link}  onChange={handleChange}/>
+        </Form.Group>
 
-        <div className="jobCreation">
-          {/* <label htmlFor="title">Job Title:</label> */}
-          <input className="createJobInput" type="text" name="title" value={newJob.title}  onChange={handleChange}/>
-        </div>
-        <label htmlFor="link">Company's website:</label>
+        <Form.Group controlId="formExperience">
+          <Form.Label>Experiences:</Form.Label>
+          <Form.Control type="text" placeholder="Experiences required" name="experience" value={newJob.experience} onChange={handleChange}/>
+        </Form.Group>
 
-  
-        <div className="jobCreation">
-          {/* <label htmlFor="link">Company's website:</label> */}
-          <input className="createJobInput" type="text" name="link" value={newJob.link}  onChange={handleChange}/>
-        </div>
-        <label htmlFor="experience">Experiences required:</label>
+        <Form.Group controlId="formSalary">
+          <Form.Label>Salary:</Form.Label>
+          <Form.Control type="text" placeholder="Average salary/hour" name="salary" value={newJob.salary}  onChange={handleChange}/>
+        </Form.Group>
 
-  
-        <div className="jobCreation">
-          {/* <label htmlFor="experience">Experiences required:</label> */}
-          <input className="createJobInput" type="text" name="experience" value={newJob.experience} onChange={handleChange}/>
-        </div>
-        <label htmlFor="salary">Average salary/hour:</label>
+        <Form.Group controlId="formLocation">
+          <Form.Label>Job's Location:</Form.Label>
+          <Form.Control type="text" placeholder="Location" name="location" value={newJob.location}  onChange={handleChange}/>
+        </Form.Group>
 
-  
-        <div className="jobCreation">
-          {/* <label htmlFor="salary">Average salary/hour:</label> */}
-          <input className="createJobInput" type="text" name="salary" value={newJob.salary}  onChange={handleChange}/>
-        </div>
-        <label htmlFor="location">Job's Location:</label>
+        <Form.Group controlId="formDescription">
+          <Form.Label>Job description:</Form.Label>
+          <FloatingLabel controlId="floatingDescription" label="">
+        <Form.Control type="text" placeholder="" name="description" onChange={handleChange} value={newJob.description}/>
+      </FloatingLabel>        </Form.Group>
 
-        <div className="jobCreation">
-          {/* <label htmlFor="location">Job's Location:</label> */}
-          <input className="createJobInput" type="text" name="location" value={newJob.location}  onChange={handleChange}/>
-        </div>
-        <label htmlFor="description">Job description:</label>
-
-         <div className="description">
-          {/* <label htmlFor="description">Job description:</label> */}
-          <textarea name="description" rows="15" cols="80" onChange={handleChange} value={newJob.description}></textarea>
-        </div>
-  
-        <button 
-        className="signUpButton" 
-        type="submit" 
-        name="button" 
         
-        
-        >
-          Post the Job
-        </button>
-      </form>
-    );
-  }
-  
 
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
+    </div>
+  );
+}
 
-
-export default CreateJob; 
+export default CreateJob;

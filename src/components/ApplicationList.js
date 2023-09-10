@@ -13,12 +13,9 @@ useEffect(() => {
     
 }, []);
 
-function position(newpost){
-    setApplications([...applications, newpost])
-}
-
 return(
     <div>
+    
             {applications.map((application)=>
             <JobApplicationFormat 
             key={application.id} 
@@ -30,7 +27,10 @@ return(
             availability={application.availability}
 
             />)}
-            <Route exact path="/apply" component={<JobApplication position={position}/>} />
+            <Route exact path="/apply" component={<JobApplication />} />
+            
+
+
             
 
     </div>

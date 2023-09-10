@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 
@@ -7,10 +7,11 @@ import { useHistory } from "react-router-dom";
 function Welcome() {
   const history = useHistory();
 
-  // function backToLogIn(){
-  //   history.goBack();
-  // }
-
+  useEffect(() => {
+    
+    sessionStorage.clear();
+    
+  }, []);
 function logInClick(){
   history.push("/login");
 }

@@ -203,7 +203,7 @@ label{
 
     }
     .SignIn{
-  margin: 10px 35% 10px 35%;
+  margin: 30px 35% 10px 35%;
   padding: 10px 25px 10px 25px;
 
     }
@@ -214,4 +214,32 @@ label{
 
       font-weight: bold;
     }
+    .display-job{
+      font-size: 20px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      border-color: bisque;
+      display: inline-block;
+      text-align: center;
+      margin: 1% 0px 1% 20px;
+    }
+
+    .post-new-job{
+      padding: 10px 0 10px 0;
+    }
+    .job-creation{
+      max-width: 70%;
+      margin: 0 auto;
+      padding: 60px 20px 35px 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      background-color: #fff;
+
+    }
+    .CreatgH2{    
+      font-weight: bold;
+      font-size: 35px;
+margin: 0px 0 5% 0;  
+  }
     

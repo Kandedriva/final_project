@@ -1,39 +1,50 @@
-// import React, { useState } from 'react';
-// import { Form, Button, FloatingLabel } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Button,  } from 'react-bootstrap';
+
+import Form from 'react-bootstrap/Form';
 
 
-// function Try(){
-// return(
-//     <div className="homePage"> 
+function Try(){
+return(
+    <div className="logIn"> 
 
-// <Form.Group controlId="formAddress">
-// <h1>Welcome to Dream Job</h1>
-// <span>
-// Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-// Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-// Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>
-// </span>
-// <Button
-// type="button" 
-// name="button" onClick={logInClick}
-//  variant="outline-primary" 
-//  className="sign">
-//  Log In
-//  </Button>{' '}
-// <Button
-// type="button" 
-// name="button" onClick={logInClick}
-//  variant="outline-success"
-//   className="sign">
-//   Register
-//   </Button>{' '}
-          
-//         </Form.Group>
+<Form>
+        <Form.Group controlId="formFirstName">
+          <Form.Label>First Name</Form.Label>
+          <Form.Control type="text" placeholder="Enter first name" />
+        </Form.Group>
+
+        <Form.Group controlId="formLastName">
+          <Form.Label>Last Name</Form.Label>
+          <Form.Control type="text" placeholder="Enter last name" />
+        </Form.Group>
+
+        <Form.Group controlId="formEmail">
+          <Form.Label>Email</Form.Label>
+          <Form.Control type="email" placeholder="Enter email" />
+        </Form.Group>
+
+        <Form.Group controlId="formPassword">
+          <Form.Label>Password</Form.Label>
+          <Form.Control type="password" placeholder="Enter password" />
+        </Form.Group>
+
+        <Form.Group controlId="formAddress">
+          <Form.Label>Address</Form.Label>
+          <Form.Control type="text" placeholder="Enter address" />
+        </Form.Group>
+
+        <Form.Group controlId="formCity">
+          <Form.Label>City</Form.Label>
+          <Form.Control type="text" placeholder="Enter city" />
+        </Form.Group>
+
+        </Form>
 
 
 
-//     </div>
-// )
-// }
+    </div>
+)
+}
 
-// export default Try
+export default Try

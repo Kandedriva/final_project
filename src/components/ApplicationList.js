@@ -27,7 +27,7 @@ return(
             availability={application.availability}
 
             />)}
-            <Route exact path="/apply" component={<JobApplication />} />
+            <Route path="/apply" component={JobApplication } />
             
 
 

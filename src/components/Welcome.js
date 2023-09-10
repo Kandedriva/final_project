@@ -7,11 +7,11 @@ import { useHistory } from "react-router-dom";
 function Welcome() {
   const history = useHistory();
 
-  useEffect(() => {
+  // useEffect(() => {
     
-    sessionStorage.clear();
+  //   sessionStorage.clear();
     
-  }, []);
+  // }, []);
 function logInClick(){
   history.push("/login");
 }

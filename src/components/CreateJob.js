@@ -1,15 +1,17 @@
-
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
+import { useHistory } from 'react-router-dom';
 
-/* Import Bootstrap CSS at the top */
-import 'bootstrap/dist/css/bootstrap.min.css';
+/* Import Bootstrap CSS */
 
 
 
 function CreateJob() {
+
+  // state to handle the POST request
   const [openPosition, setOpenPosition] = useState([]);
+//state to control the input
     const [newJob, setnewJob] = useState({
         company: "",
         title: "",
@@ -19,6 +21,7 @@ function CreateJob() {
         location: "",
         description: ""
       });
+//handle inputs change funsction
       function handleChange(event){
         const name = event.target.name;
         let value = event.target.value;
@@ -27,12 +30,13 @@ function CreateJob() {
           [name]: value,
         })
       }
-
+      const history = useHistory()
+//function to handle the post request
       function addNewPostion(jobs){
         setOpenPosition([...openPosition, jobs])
 
       }
-
+//POST request to create NEW JOB
       function submitJob(event){
         event.preventDefault();
         const newjobForma = {
@@ -67,7 +71,7 @@ function CreateJob() {
         location: "",
         description: ""
       })
-    
+      history.push("/")
       }
   return (
     <div className="form-container info">

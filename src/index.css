@@ -193,4 +193,25 @@ label{
     .info{
       background-color: powderblue;
     }
+    .logIn{
+      box-sizing: border-box;
+      padding: 0 15px 10px 15px;
+      max-width: 60%;
+      margin: 20% auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    }
+    .SignIn{
+  margin: 10px 100px 10px 100px;
+  padding: 10px 25px 10px 25px;
+
+    }
+    .logH2{
+      margin: 30px 50% 2% 0;
+      max-width: 200px;
+      text-align: center;
+
+      font-weight: bold;
+    }
     

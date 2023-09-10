@@ -12,6 +12,8 @@ import Try from "./Try";
 
 
 
+
+
 function App(){
 
   
@@ -19,6 +21,7 @@ function App(){
   return(
     <div>
     
+ {/* <Try/> */}
     <NavBar/>
    
 

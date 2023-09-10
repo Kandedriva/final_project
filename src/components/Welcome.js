@@ -42,7 +42,7 @@ name="button"
 <Button
 type="button" 
 name="button" 
-onClick={logInClick}
+onClick={createClick}
  variant="outline-success"
   className="sign">
   Register

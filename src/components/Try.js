@@ -1,29 +1,37 @@
 // import React, { useState } from 'react';
 // import { Form, Button, FloatingLabel } from 'react-bootstrap';
-// /* Import Bootstrap CSS at the top */
-// // import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 // function Try(){
 // return(
-//     <div className="logIn">
-//     <h2 className="logH2"><strong>Log In</strong></h2>
-//     <Form onSubmit={handleSubmit}>
-//         <Form.Group controlId="formEmail">
-//           <Form.Label>Email</Form.Label>
-//           <Form.Control type="email" placeholder="Enter email" name="email" className="login" onChange={(event)=>setEmail(event.target.value)}  value={email} />
+//     <div className="homePage"> 
+
+// <Form.Group controlId="formAddress">
+// <h1>Welcome to Dream Job</h1>
+// <span>
+// Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+// Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+// Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>
+// </span>
+// <Button
+// type="button" 
+// name="button" onClick={logInClick}
+//  variant="outline-primary" 
+//  className="sign">
+//  Log In
+//  </Button>{' '}
+// <Button
+// type="button" 
+// name="button" onClick={logInClick}
+//  variant="outline-success"
+//   className="sign">
+//   Register
+//   </Button>{' '}
+          
 //         </Form.Group>
 
-//         <Form.Group controlId="formPassword">
-//           <Form.Label>Password</Form.Label>
-//           <Form.Control type="password" placeholder="Enter password" className="login" name="password" onChange={(event)=>setPassword(event.target.value)} value={password} autoComplete="false"/>
-//         </Form.Group>
 
-//         <Button 
-//         variant="outline-primary"
-//          className="SignIn">
-//          Log In
-//          </Button>{' '}
-//         </Form>
+
 //     </div>
 // )
 // }

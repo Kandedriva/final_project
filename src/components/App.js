@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Login from "./Login";
 import Welcome from "./Welcome";
 import CreateJob from "./CreateJob";
-import CreateAccount from "./CreateAccount";
+import Register from "./Register";
 import JobApplication from "./JobApplication";
 import NavBar from "./NavBar";
 import ApplicationList from "./ApplicationList";
@@ -42,7 +42,7 @@ function App(){
 <Login/>
 </Route>
 <Route exact path="/register">
-<CreateAccount/>
+<Register/>
 </Route>
 <Route exact path="/logout"> <Welcome /></Route>
   

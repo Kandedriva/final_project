@@ -1,29 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Form, Button } from 'react-bootstrap';
 
 
-
-
 function Login() {
-    // const [mouseOver, setmouseOver] = useState(false);
 
 const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
 const history = useHistory();
 
-// function handleMouseOver(){
-//     setmouseOver(true);
-    
-// }
-
-// function handleMouseOut(){
-//     setmouseOver(false);
-// }
-
-// function goBack(){
-//   history.push("/logout")
-// }
+// useEffect(() => {
+//   sessionStorage.clear();
+  
+// }, []);
 
 function handleSubmit(event){
 event.preventDefault();
@@ -36,6 +25,8 @@ if(validation()){
       alert("Please provide valid information");
   } else {
       const user = data.find(dat => dat.password === password);
+      sessionStorage.setItem("email", email)
+
       if (user) {
           history.push("/");
       } else {
@@ -60,8 +51,16 @@ function validation(){
     alert("please Enter Password")
   }
   return result;
+
+  
 }
+// function goBack(){
+//   history.push("/logout")
+// }
     return (
+      <>
+      {/* <Button  onClick={goBack} variant="light" className="go-back">Go-back</Button> */}
+          {/* <Button className="go-back">Go back</Button> */}
       <div className="logIn">
     <h2 className="logH2"><strong>Log In</strong></h2>
     <Form method="post" onSubmit={handleSubmit}>
@@ -84,31 +83,7 @@ function validation(){
          </Button>{' '}
         </Form>
     </div>
-   
-      // <div className="divi">
-
-
-
-
-      // <nav><button className="goback" onClick={goBack}> Go back</button></nav>
-      //   <form className="mb-3 loginForm" action="index.html" method="post" onSubmit={handleSubmit}>
-      //   <h1>Login</h1>
-
-      //     <label htmlFor="fname">email</label><br />
-      //     <input className="login" type="text" name="email" id="fname" placeholder="enter email"  onChange={(event)=>setEmail(event.target.value)}  value={email} /><br />
-      //     <label htmlFor="password">Password</label><br />
-      //     <input className="login" type="password" name="password" id="password" placeholder="password" onChange={(event)=>setPassword(event.target.value)} value={password} autoComplete="false"/><br />
-      //     <button 
-      //     type="submit" 
-      //     name="button" 
-      //     className="loginButton"  
-      //     onMouseOut={handleMouseOut}
-      //   style={mouseOver? {backgroundColor: "#00FFFF"}: { backgroundColor: "white"}}
-      //   onMouseOver={handleMouseOver}
-      //     >Login</button>
-      //   </form>
-        
-      // </div>
+    </>
     );
   }
 export default Login;  

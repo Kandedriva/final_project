@@ -8,6 +8,9 @@ import JobApplication from "./JobApplication";
 import NavBar from "./NavBar";
 import ApplicationList from "./ApplicationList";
 import AvailableJobList from "./AvailableJobList";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import Try from "./Try";
 
 
@@ -20,11 +23,11 @@ function App(){
 
   return(
     <div>
-    
+        <ToastContainer />
+
  {/* <Try/> */}
     <NavBar/>
    
-
     <Switch>
     <Route exact path="/list">
     <ApplicationList/>

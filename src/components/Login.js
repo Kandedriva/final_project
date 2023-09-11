@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Form, Button } from 'react-bootstrap';
+import { toast } from "react-toastify";
 
 
 function Login() {
@@ -8,11 +9,6 @@ function Login() {
 const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
 const history = useHistory();
-
-// useEffect(() => {
-//   sessionStorage.clear();
-  
-// }, []);
 
 function handleSubmit(event){
 event.preventDefault();
@@ -22,15 +18,18 @@ if(validation()){
   .then(response=> response.json())
   .then(data=>{
     if (Object.keys(data).length === 0) {
-      alert("Please provide valid information");
+      toast.warning("Please provide valid information",{style:{
+        backgroundColor: "yello"
+      }});
   } else {
       const user = data.find(dat => dat.password === password);
       sessionStorage.setItem("email", email)
 
       if (user) {
+        toast.success("Successfully log In")
           history.push("/");
       } else {
-          alert("Invalid email or password");
+          toast.error("Invalid email or password");
       }
   }
   })
@@ -43,12 +42,12 @@ function validation(){
   let result = true;
   if(email==="" || email===null){
     result = false;
-    alert("please Enter Email")
+    toast.warning("please Enter Email")
   }
 
   if(password==="" || password===null){
     result = false;
-    alert("please Enter Password")
+    toast.warning("please Enter Password")
   }
   return result;
 

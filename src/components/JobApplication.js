@@ -3,12 +3,11 @@ import { Button,  } from 'react-bootstrap';
 import { InputGroup } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form'; 
 import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function JobApplication() {
 
   const [newApplication, setNewApplication] = useState([]);
-  const history = useHistory()
-
   const [application, setApplication] = useState({
     applyName: "",
     restOfName: "",
@@ -17,6 +16,8 @@ function JobApplication() {
     education: "",
     availability: ""
   })
+  const history = useHistory()
+
 
   function handleChange(event){
     const name = event.target.name;
@@ -54,7 +55,7 @@ function newapplication(newpost){
     .then(response=>response.json())
     .then(newpost=>newapplication(newpost)
   )
-
+toast.success("Your Application has been sent with success")
   history.push("/list")
 
     console.log("Your applied successfully to this position.")

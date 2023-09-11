@@ -4,6 +4,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import { useHistory } from 'react-router-dom';
 // import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
+import { toast } from 'react-toastify';
 
 /* Import Bootstrap CSS */
 
@@ -73,6 +74,7 @@ function CreateJob() {
         location: "",
         description: ""
       })
+      toast.success("Your work position has been created with succuss.!!!")
       history.push("/")
       }
   return (

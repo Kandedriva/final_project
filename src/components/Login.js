@@ -54,13 +54,13 @@ function validation(){
 
   
 }
-// function goBack(){
-//   history.push("/logout")
-// }
+function goBack(){
+  history.push("/logout")
+}
+
     return (
       <>
-      {/* <Button  onClick={goBack} variant="light" className="go-back">Go-back</Button> */}
-          {/* <Button className="go-back">Go back</Button> */}
+      <Button  onClick={goBack} variant="light" className="go-back">Go-back</Button>
       <div className="logIn">
     <h2 className="logH2"><strong>Log In</strong></h2>
     <Form method="post" onSubmit={handleSubmit}>

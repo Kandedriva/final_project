@@ -47,14 +47,14 @@ import { Form, Button } from 'react-bootstrap';
                 history.push("/login")
             }
 
-            // function goBack(){
-            //     history.push("/logout")
-            //   }
+            function goBack(){
+                history.push("/logout")
+              }
 
 
             return (   
                 <>     
-                {/* <Button  onClick={goBack} variant="light" className="go-back">Go-back</Button> */}
+                <Button  onClick={goBack} variant="light" className="go-back">Go-back</Button>
                 <div className="logIn">
                 <h2 className="logH2"><strong>Register</strong></h2>
                 <Form onSubmit={handleUser}>

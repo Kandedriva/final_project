@@ -19,7 +19,12 @@ import Try from "./Try";
 
 function App(){
 
-  
+  const [openPosition, setOpenPosition] = useState([]);
+
+  function addNewPostion(jobs){
+    setOpenPosition([...openPosition, jobs])
+
+  }
 
   return(
     <div>
@@ -33,7 +38,7 @@ function App(){
     <ApplicationList/>
     </Route>
     <Route exact path ="/create-Job">
-  <CreateJob/>
+  <CreateJob addNewPostion={addNewPostion}/>
 </Route>
 <Route exact path = "/">
   <AvailableJobList/>

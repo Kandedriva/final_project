@@ -10,10 +10,10 @@ import { toast } from 'react-toastify';
 
 
 
-function CreateJob() {
+function CreateJob({openPosition, setOpenPosition, addNewPostion}) {
 
   // state to handle the POST request
-  const [openPosition, setOpenPosition] = useState([]);
+  // const [openPosition, setOpenPosition] = useState([]);
 //state to control the input
     const [newJob, setnewJob] = useState({
         company: "",
@@ -35,10 +35,10 @@ function CreateJob() {
       }
       const history = useHistory()
 //function to handle the post request
-      function addNewPostion(jobs){
-        setOpenPosition([...openPosition, jobs])
+      // function addNewPostion(jobs){
+      //   setOpenPosition([...openPosition, jobs])
 
-      }
+      // }
 //POST request to create NEW JOB
       function submitJob(event){
         event.preventDefault();
@@ -123,7 +123,7 @@ function CreateJob() {
 <div className="post-new-job">
       <Form.Group controlId="formAddress" className="post-new-job">
           <Form.Label>Location</Form.Label>
-          <Form.Control type="text" placeholder="Working location" name="location" value={newJob.location} onChange={handleChange}/>
+          <Form.Control type="text" placeholder="Workplace" name="location" value={newJob.location} onChange={handleChange}/>
         </Form.Group>
 
       <InputGroup className="post-new-job">
@@ -145,70 +145,6 @@ function CreateJob() {
       </div>
       </Form>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            {/* <h3>Open a position and receive the candidats you need</h3>
-
-      <Form className="" onSubmit={submitJob}>
-        <Form.Group controlId="formCompanyName" >
-          <Form.Label>Company's name:</Form.Label>
-          <Form.Control type="text" placeholder="Enter first name" name="company" value={newJob.company}  onChange={handleChange}/>
-        </Form.Group>
-
-        <Form.Group controlId="formJobTitle">
-          <Form.Label>Job Title:</Form.Label>
-          <Form.Control type="text" placeholder="Enter job title" name="title" value={newJob.title}  onChange={handleChange}/>
-        </Form.Group>
-
-        <Form.Group controlId="formWebsite">
-          <Form.Label>Company's website:</Form.Label>
-          <Form.Control type="link" placeholder="Enter website" name="link" value={newJob.link}  onChange={handleChange}/>
-        </Form.Group>
-
-        <Form.Group controlId="formExperience">
-          <Form.Label>Experiences:</Form.Label>
-          <Form.Control type="text" placeholder="Experiences required" name="experience" value={newJob.experience} onChange={handleChange}/>
-        </Form.Group>
-
-        <Form.Group controlId="formSalary">
-          <Form.Label>Salary:</Form.Label>
-          <Form.Control type="text" placeholder="Average salary/hour" name="salary" value={newJob.salary}  onChange={handleChange}/>
-        </Form.Group>
-
-        <Form.Group controlId="formLocation">
-          <Form.Label>Job's Location:</Form.Label>
-          <Form.Control type="text" placeholder="Location" name="location" value={newJob.location}  onChange={handleChange}/>
-        </Form.Group>
-
-        <Form.Group controlId="formDescription">
-          <Form.Label>Job description:</Form.Label>
-          <FloatingLabel controlId="floatingDescription" label="">
-        <Form.Control type="text" placeholder="" name="description" onChange={handleChange} value={newJob.description}/>
-      </FloatingLabel>        </Form.Group>
-
-        
-
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
-      </Form> */}
     </div>
   );
 }

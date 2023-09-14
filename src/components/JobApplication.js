@@ -9,8 +9,8 @@ function JobApplication() {
 
   const [newApplication, setNewApplication] = useState([]);
   const [application, setApplication] = useState({
-    applyName: "",
-    restOfName: "",
+    applicationName: "",
+    lastName: "",
     email: "",
     history:"",
     education: "",
@@ -37,8 +37,8 @@ function newapplication(newpost){
   function handleApplication(event){
     event.preventDefault();
     const newApplication ={
-      applyName: application.applyName,
-      restOfName: application.restOfName,
+      applicationName: application.applicationName,
+      lastName: application.lastName,
       email: application.email,
       history: application.history,
       education: application.education,
@@ -69,12 +69,12 @@ toast.success("Your Application has been sent with success")
 <Form onSubmit={handleApplication}>
         <Form.Group controlId="formFirstName">
           <Form.Label>First Name</Form.Label>
-          <Form.Control type="text" name="applyName" value={application.applyName} placeholder="Your legal first name" onChange={handleChange} />
+          <Form.Control type="text" name="applicationName" value={application.applicationName} placeholder="Your legal first name" onChange={handleChange} />
         </Form.Group>
 
         <Form.Group controlId="formLastName">
           <Form.Label>Last Name</Form.Label>
-          <Form.Control type="text" name="restOfName" value={application.restOfName} placeholder="Including middle name" onChange={handleChange} />
+          <Form.Control type="text" name="lastName" value={application.lastName} placeholder="Including middle name" onChange={handleChange} />
         </Form.Group>
 
         <Form.Group controlId="formEmail">

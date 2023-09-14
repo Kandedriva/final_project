@@ -4,8 +4,8 @@ import JobApplication from "./JobApplication";
 import { Route } from "react-router-dom";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
-function ApplicationList(){
-    const [applications, setApplications] = useState([]);
+function ApplicationList({applications, setApplications}){
+    // const [applications, setApplications] = useState([]);
     const history= useHistory()
 
 useEffect(() => {

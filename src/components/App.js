@@ -19,10 +19,11 @@ import Try from "./Try";
 
 function App(){
 
-  const [openPosition, setOpenPosition] = useState([]);
+  // const [openPosition, setOpenPosition] = useState([]);
+  const [applications, setApplications] = useState([]);
 
   function addNewPostion(jobs){
-    setOpenPosition([...openPosition, jobs])
+    setApplications([...applications, jobs])
 
   }
 
@@ -35,7 +36,7 @@ function App(){
    
     <Switch>
     <Route exact path="/list">
-    <ApplicationList/>
+    <ApplicationList applications={applications} setApplications={setApplications} />
     </Route>
     <Route exact path ="/create-Job">
   <CreateJob addNewPostion={addNewPostion}/>

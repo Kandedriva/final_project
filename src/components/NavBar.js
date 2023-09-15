@@ -11,15 +11,15 @@ function NavBar(){
 
     useEffect(() => {
         let email = sessionStorage.getItem("email");
-        if (email === "" || email === null) history.push("/logout");
-      }, []);
+        if (email === "" || email === null) history.replace("/logout");
+      }, [history]);
     
       const handleLogout = () => {
         // Clear user's session storage
         sessionStorage.removeItem("email");
     
         // Navigate to the "/logout" path
-        history.push("/logout");
+        history.replace("/logout");
       };
     
     

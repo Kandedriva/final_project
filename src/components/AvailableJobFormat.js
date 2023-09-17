@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Form, Button } from 'react-bootstrap';
+import NavBar from "./NavBar";
 
 
 function AvailableJobFormat({title, Company, experiences, average, location, description, website}){
+
+    const [follow, setFollow] = useState(true);
+
 const history = useHistory()
     function handleClick(){
         history.push("/apply")
+
+    }
+
+    function handleFollow(){
+        setFollow(!follow)
 
     }
     return (
@@ -19,12 +28,8 @@ const history = useHistory()
             <p>Average salary: {average} </p>
             <p>Location: {location} </p>
             <p>Job details: {description} </p>
-            {/* <Button variant="outline-light" >Apply</Button>{' '} */}
             <Button variant="info" onClick={handleClick}>Apply</Button>{' '}
-
-
-            {/* <button onClick={handleClick}>Apply</button> */}
-          
+            {<p><Button variant="outline-danger" className="follow" onClick={handleFollow}>{follow? "follow" : "following"} {Company}</Button></p>}
         </Form.Group>
             
 

@@ -58,6 +58,7 @@ function goBack(){
 }
     return (
       <>
+     
       <Button  onClick={goBack} variant="light" className="go-back">Go-back</Button>
       <div className="logIn">
     <h2 className="logH2"><strong>Log In</strong></h2>

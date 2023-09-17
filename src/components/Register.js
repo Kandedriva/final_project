@@ -60,22 +60,22 @@ import { Form, Button } from 'react-bootstrap';
                 <Form onSubmit={handleUser}>
             
                 <Form.Group controlId="formFirstName">
-                      <Form.Label>First Name</Form.Label>
+                      <Form.Label className="required">First Name </Form.Label>
                       <Form.Control type="text" placeholder="Enter first name" name="firstName" value={registration.firstName}  onChange={handleClick}/>
                     </Form.Group>
             
                     <Form.Group controlId="formLastName">
-                      <Form.Label>Last Name</Form.Label>
+                      <Form.Label className="required">Last Name</Form.Label>
                       <Form.Control type="text" placeholder="Enter last name" name="lastName" value={registration.lastName}  onChange={handleClick}/>
                     </Form.Group>
             
                     <Form.Group controlId="formEmail">
-                      <Form.Label>Email</Form.Label>
+                      <Form.Label className="required">Email</Form.Label>
                       <Form.Control type="email" placeholder="Enter email" name="email" value={registration.email} onChange={handleClick}/>
                     </Form.Group>
             
                     <Form.Group controlId="formPassword">
-                      <Form.Label>Password</Form.Label>
+                      <Form.Label className="required">Password</Form.Label>
                       <Form.Control type="password" placeholder="Confirm password..." name="password" value={registration.password}  onChange={handleClick}/>
                     </Form.Group>
             

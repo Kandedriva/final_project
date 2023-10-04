@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Form, Button } from 'react-bootstrap';
-import NavBar from "./NavBar";
 
 
 function AvailableJobFormat({title, Company, experiences, average, location, description, website}){
@@ -29,7 +28,7 @@ const history = useHistory()
             <p>Location: {location} </p>
             <p>Job details: {description} </p>
             <Button variant="info" onClick={handleClick}>Apply</Button>{' '}
-            {<p><Button variant="outline-danger" className="follow" onClick={handleFollow}>{follow? "follow" : "following"} {Company}</Button></p>}
+            {<p><Button variant="outline-info" className="follow" onClick={handleFollow}>{follow? "follow" : "You're following"} {Company}</Button></p>}
         </Form.Group>
             
 

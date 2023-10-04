@@ -29,8 +29,9 @@ function NavBar(){
 <Navbar bg="primary" data-bs-theme="dark" className="navbar">
         <Container>
         
-          <Navbar.Brand href="/">Job List </Navbar.Brand>
+          <Navbar.Brand href="#"><h3>Dream-Job</h3> </Navbar.Brand>
           <Nav className="me-auto">
+          <Nav.Link href="/">Job List</Nav.Link>
             <Nav.Link href="/list">Your Applications</Nav.Link>
             <Nav.Link href="/create-Job">Open a position</Nav.Link>           
 

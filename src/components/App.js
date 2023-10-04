@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import Login from "./Login";
 import Welcome from "./Welcome";
@@ -11,27 +11,41 @@ import AvailableJobList from "./AvailableJobList";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import Try from "./Try";
-
-
 
 
 
 function App(){
-
-  // const [openPosition, setOpenPosition] = useState([]);
+  //state to create new job
+  const [jobs, setJobs] = useState([]);
+  //state to create new application
   const [applications, setApplications] = useState([]);
 
-  function addNewPostion(jobs){
-    setApplications([...applications, jobs])
+    //function to create new job
+  function addNewPostion(job){
+    setJobs([...jobs, job])
 
   }
+  //get request to display the list of available jobs.
+  useEffect(() => {
+    fetch("https://phase-2-banckend.onrender.com/availableJobs")
+    .then(response=>response.json())
+    .then(data=>setJobs(data))
+
+   
+}, []);
+
+//Get request to display the applications list.
+useEffect(() => {
+  fetch("https://phase-2-banckend.onrender.com/waitingList ")
+  .then(response=>response.json())
+  .then(data=>setApplications(data))
+  
+}, []);
 
   return(
     <div>
         <ToastContainer />
 
- {/* <Try/> */}
     <NavBar/>
    
     <Switch>
@@ -42,10 +56,10 @@ function App(){
   <CreateJob addNewPostion={addNewPostion}/>
 </Route>
 <Route exact path = "/">
-  <AvailableJobList/>
+  <AvailableJobList jobs={jobs} setJobs={setJobs} />
 </Route>
 {<Route exact path="/apply">
-<JobApplication/>
+<JobApplication applications={applications} setApplications={setApplications} />
 </Route>}
 <Route exact path="/login">
 <Login/>

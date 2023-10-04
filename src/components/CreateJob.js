@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
-import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import { useHistory } from 'react-router-dom';
 // import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
@@ -34,12 +33,7 @@ function CreateJob({openPosition, setOpenPosition, addNewPostion}) {
         })
       }
       const history = useHistory()
-//function to handle the post request
-      // function addNewPostion(jobs){
-      //   setOpenPosition([...openPosition, jobs])
 
-      // }
-//POST request to create NEW JOB
       function submitJob(event){
         event.preventDefault();
         const newjobForma = {
@@ -51,6 +45,7 @@ function CreateJob({openPosition, setOpenPosition, addNewPostion}) {
           location: newJob.location,
            description: newJob.description
           }
+
         console.log("Submitted")
         fetch("https://phase-2-banckend.onrender.com/availableJobs",{
           method: "POST",

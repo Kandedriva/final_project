@@ -17,6 +17,7 @@ if(validation()){
   fetch(`https://phase-2-banckend.onrender.com/users`)
   .then(response=> response.json())
   .then(data=>{
+
     if (Object.keys(data).length === 0) {
       toast.warning("Please provide valid information",{style:{
         backgroundColor: "yello"

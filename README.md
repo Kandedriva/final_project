@@ -28,7 +28,7 @@ Dream Job is built using the following technologies:
 `React`: The core framework for building the web application.
 `Bootstrap`: Utilized for creating a responsive and user-friendly design.
 `React Bootstrap`: Ensures the app is mobile-friendly.
-CSS and Bootstrap Style Sheets: Used for styling the web page.
+`CSS and Bootstrap Style Sheets`: Used for styling the web page.
 `React-toastify`: Provides user feedback after performing tasks.
 `React Hooks`: Leveraged for state management and navigation.
 

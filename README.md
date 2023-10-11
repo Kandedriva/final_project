@@ -30,22 +30,22 @@ Logging Out: When you log out, you'll be taken back to the welcome page.
 #### `Technologies Used`
 
 Dream Job is built using the following technologies:
-`React`: The core framework for building the web application.
-`Bootstrap`: Utilized for creating a responsive and user-friendly design.
-`React Bootstrap`: Ensures the app is mobile-friendly.
-`CSS and Bootstrap Style Sheets`: Used for styling the web page.
-`React-toastify`: Provides user feedback after performing tasks.
-`React Hooks`: Leveraged for state management and navigation.
+React: The core framework for building the web application.
+Bootstrap: Utilized for creating a responsive and user-friendly design.
+React Bootstrap: Ensures the app is mobile-friendly.
+CSS and Bootstrap Style Sheets`: Used for styling the web page.
+React-toastify: Provides user feedback after performing tasks.
+React Hooks: Leveraged for state management and navigation.
 
 ##### `Contributing`
 
 We welcome contributions to improve Dream Job and make it a real-world web application. To contribute:
 
-`Fork the Repository`: Start by forking this repository to your own GitHub account.
-`Create a New Branch`: Create a new branch in your forked repository for the feature or bug fix you want to work on.
-`Make Changes and Commit`: Make your desired changes and commit them with descriptive commit messages.
-`Push Changes`: Push your changes to your forked repository.
-`Submit a Pull Request`: Submit a pull request to the main repository for review.
+Fork the Repository: Start by forking this repository to your own GitHub account.
+Create a New Branch: Create a new branch in your forked repository for the feature or bug fix you want to work on.
+Make Changes and Commit: Make your desired changes and commit them with descriptive commit messages.
+Push Changes: Push your changes to your forked repository.
+Submit a Pull Request: Submit a pull request to the main repository for review.
 
 # Links of the Project
 
@@ -53,6 +53,7 @@ Front-end repository [`https://github.com/Kandedriva/final_project`].
 back-end repository[`https://github.com/Kandedriva/my_phase2_project-backend`].
 The back-end link on render.com [`https://phase-2-banckend.onrender.com/`]
 demo video [`https://youtu.be/-hHCB1TIVfc`]
-
+blog post for in-depth description of the code
+[`https://dev.to/kande/how-i-built-my-single-page-reactjs-web-app-1emc`]
 Please note that this project is for educational purposes and is part of the Flatiron School curriculum.
 Thank you for your interest in contributing to Dream Job! Together, we can make this platform even better.

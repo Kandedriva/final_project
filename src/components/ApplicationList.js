@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 function ApplicationList({applications}){
 
-    const history= useHistory()
+    // const history= useHistory()
 return(
     <div>
     

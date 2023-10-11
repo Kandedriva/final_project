@@ -97,7 +97,7 @@ toast.success("Your Application has been sent with success")
       <p className="warning">
       Once your application is submitted, the employer will reach out to you for further information and to guide you through the remaining steps. 
       <br/>The duration of this process may vary depending on the HR department.
-      <br/> <h3><strong>Good luck!</strong></h3>
+      <br/><strong>Good luck!</strong>
         </p>
 
         <Button 
